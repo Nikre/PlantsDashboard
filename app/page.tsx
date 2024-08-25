@@ -34,17 +34,22 @@ export default function Home() {
   return (
     <main className="flex min-h-screen flex-col items-center justify-between p-24">
       <div className="container mx-auto p-4">
-        <h1 className="text-3xl font-bold mb-6">Dashboard Umidità Piante</h1>
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
-          {plantsData.map((plant, index) => (
-            <PlantHumidityWidget
-              key={index}
-              plantName={plant.plantName}
-              currentHumidity={plant.currentHumidity}
-              historicalData={plant.historicalData}
-            />
-          ))}
-        </div>
+        <h1 className="title border rounded-lg text-3xl font-bold mb-10">Dashboard Umidità Piante</h1>
+        {plantsData.map((plant, index) => (
+          <div data-key={plant.plantName} className="dashboard-row border rounded-lg  mb-6">
+            <div className="plant-picture">
+              <img src="https://www.freva.com/wp-content/uploads/2020/03/GPIO_fan_pins.webp"></img>
+            </div>
+            <div className="gauges-margin">
+              <PlantHumidityWidget
+                key={index}
+                plantName={plant.plantName}
+                currentHumidity={plant.currentHumidity}
+                historicalData={plant.historicalData}
+              />
+            </div>
+          </div>
+        ))}
       </div>
     </main>
   );

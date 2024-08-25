@@ -67,3 +67,24 @@
     @apply bg-background text-foreground;
   }
 }
+
+.dashboard-row{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+}
+
+.plant-picture{
+  margin: auto 0;
+  scale: 0.6;
+}
+
+.gauges-margin{
+  margin: auto 0px;
+}
+
+.title{
+  font-size: 3em;
+  text-align: center;
+  padding: 0.7em;
+}
