@@ -74,9 +74,14 @@
   justify-content: space-evenly;
 }
 
+
+.plant-section{
+  margin: 20px 0;
+}
+
 .plant-picture{
-  margin: auto 0;
-  scale: 0.6;
+  margin: 20px 0;
+  max-height: 70%;
 }
 
 .gauges-margin{

@@ -37,10 +37,14 @@ export default function Home() {
         <h1 className="title border rounded-lg text-3xl font-bold mb-10">Dashboard Umidità Piante</h1>
         {plantsData.map((plant, index) => (
           <div data-key={plant.plantName} className="dashboard-row border rounded-lg  mb-6">
-            <div className="plant-picture">
-              <img src="https://www.freva.com/wp-content/uploads/2020/03/GPIO_fan_pins.webp"></img>
+            <div className="container plant-section">
+              <img className="plant-picture" src="https://imgix.be.green/63871a909af0d340974905.jpg"></img>
+              <div>
+              <h1>Lorem ipum pianta piantina secca no</h1>
+
+              </div>
             </div>
-            <div className="gauges-margin">
+            <div className="container gauges-margin">
               <PlantHumidityWidget
                 key={index}
                 plantName={plant.plantName}

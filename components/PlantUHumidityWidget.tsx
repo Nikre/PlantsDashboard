@@ -28,7 +28,8 @@ const PlantHumidityWidget: React.FC<PlantHumidityWidgetProps> = ({ plantName, cu
                 <h3 className="text-lg font-medium mb-2">Umidità Attuale</h3>
                 <GaugeChart
                     id={`humidity-gauge-${plantName}`}
-                    nrOfLevels={4}
+                    arcsLength={[0.3, 0.4, 0.3]}
+                    colors={['#EA4228', '#00C642', '#3D65D1']}
                     percent={currentHumidity / 100}
                     textColor="#000000"
                 />
