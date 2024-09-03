@@ -36,7 +36,7 @@ export default function Home() {
       <div className="container mx-auto p-4">
         <h1 className="title border rounded-lg text-3xl font-bold mb-10">Dashboard Umidità Piante</h1>
         {plantsData.map((plant, index) => (
-          <div data-key={plant.plantName} className="dashboard-row border rounded-lg  mb-6">
+          <div key={index} className="dashboard-row border rounded-lg  mb-6">
             <div className="container plant-section">
               <img className="plant-picture" src="https://imgix.be.green/63871a909af0d340974905.jpg"></img>
               <div>
